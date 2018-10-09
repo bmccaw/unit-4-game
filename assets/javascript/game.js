@@ -50,7 +50,7 @@ $(document).ready(function () {
         console.log(crystalD);
 
         $('#target').html(targetNum);
-        $('#score').html(playerScore);
+        $('#score').html('Your score: ' + playerScore);
         $('#wins').html(wins);
         $('#losses').html(losses);
     }
@@ -69,22 +69,22 @@ $(document).ready(function () {
 
     $('#crystalone').click(function () {
         playerScore = playerScore + crystalA;
-        $('#score').html(playerScore);
+        $('#score').html('Your score: ' + playerScore);
         winLose();
     });
     $('#crystaltwo').click(function () {
         playerScore = playerScore + crystalB;
-        $('#score').html(playerScore);
+        $('#score').html('Your score: ' + playerScore);
         winLose();
     });
     $('#crystalthree').click(function () {
         playerScore = playerScore + crystalC;
-        $('#score').html(playerScore);
+        $('#score').html('Your score: ' + playerScore);
         winLose();
     });
     $('#crystalfour').click(function () {
         playerScore = playerScore + crystalD;
-        $('#score').html(playerScore);
+        $('#score').html('Your score: ' + playerScore);
         winLose();
     });
 

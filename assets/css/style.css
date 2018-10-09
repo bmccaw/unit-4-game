@@ -2,3 +2,47 @@ body {
     background-image: url(../images/cavernbackground3.jpg);
     background-position: center;
 }
+#crystalone {
+    position: relative;
+    right: 145px;
+    top: 250px;
+   
+}
+#crystalone:hover {
+    background: white;
+}
+#crystaltwo {
+    position: relative;
+    left: 200px;
+    top: 40px;
+    
+}
+#crystaltwo:hover {
+    background: white;
+}
+#crystalthree {
+    position: relative;
+    right: 280px;
+    bottom: 110px;
+    
+}
+#crystalthree:hover {
+    background: white;
+}
+#crystalfour {
+    position: relative;
+    left: 325px;
+    bottom: 275px;
+    
+}
+#crystalfour:hover {
+    background: white;
+}
+#score {
+    position: relative;
+    bottom: 200px;
+    
+}
+#score:hover {
+    background: white;
+}
