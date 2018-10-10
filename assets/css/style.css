@@ -2,47 +2,53 @@ body {
     background-image: url(../images/cavernbackground3.jpg);
     background-position: center;
 }
-#crystalone {
-    position: relative;
-    right: 145px;
-    top: 250px;
-   
+h1,h2 {
+    font-family: 'Paytone One', sans-serif;
 }
-#crystalone:hover {
+img:hover {
     background: white;
+    opacity: 0px;
+}
+contaniner {
+    width: 100%;
+    height: 100%;
+}
+#crystalcontainer {
+    display: flex;
+    justify-content: center;
+}
+#crystals {
+  width: 100%;
+  height:330px;
+  display: flex;
+  justify-content:center;
+}
+#crystalone {
+    width: 150px;
+    position: absolute;
+    left: 340px;
+    bottom: 60px;
 }
 #crystaltwo {
-    position: relative;
-    left: 200px;
-    top: 40px;
-    
-}
-#crystaltwo:hover {
-    background: white;
+    width: 150px;
+    position: absolute;
+    left: 690px;
+    top: 50px;
 }
 #crystalthree {
-    position: relative;
-    right: 280px;
-    bottom: 110px;
-    
-}
-#crystalthree:hover {
-    background: white;
+    width: 150px;
+    position: absolute;
+    left: 215px;
+    top: 115px;
 }
 #crystalfour {
-    position: relative;
-    left: 325px;
-    bottom: 275px;
-    
-}
-#crystalfour:hover {
-    background: white;
+    width: 150px;
+    position: absolute;
+    left: 820px;
+    top: 120px;
 }
 #score {
     position: relative;
-    bottom: 200px;
+    bottom: 0px;
     
-}
-#score:hover {
-    background: white;
 }

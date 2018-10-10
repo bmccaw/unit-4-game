@@ -7,14 +7,15 @@ $(document).ready(function () {
     let crystalD = '';
 
     //Counters
-    let wins = 0;
-    let losses = 0;
+    let winsCounter = 0;
+    let lossesCounter = 0;
     let playerScore = 0;
 
     function reset() { //RESET
 
+        //generates random numbers from the designated ranges for the target and crystals
         function randomNum(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min; //generates random numbers for the target and crystals
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         targetNum = randomNum(19, 120);
         crystalA = randomNum(1, 12);
@@ -22,7 +23,7 @@ $(document).ready(function () {
         crystalC = randomNum(1, 12);
         crystalD = randomNum(1, 12);
 
-        //player score set to 0 before each game.
+        //player score set back to 0 before each game.
         playerScore = 0;
         console.log('RESET');
 
@@ -51,17 +52,17 @@ $(document).ready(function () {
 
         $('#target').html(targetNum);
         $('#score').html('Your score: ' + playerScore);
-        $('#wins').html(wins);
-        $('#losses').html(losses);
+        $('#wins').html(winsCounter);
+        $('#losses').html(lossesCounter);
     }
     //Win/Lose conditions.
     function winLose() {
         if (playerScore === targetNum) {
-            wins++;
+            winsCounter++;
             reset();
         }
         else if (playerScore > targetNum) {
-            losses++;
+            lossesCounter++;
             reset();
         }
     }
@@ -87,6 +88,4 @@ $(document).ready(function () {
         $('#score').html('Your score: ' + playerScore);
         winLose();
     });
-
-
 });
