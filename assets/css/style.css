@@ -2,12 +2,13 @@ body {
     background-image: url(../images/cavernbackground3.jpg);
     background-position: center;
 }
-h1,h2 {
+h1,h2,h3 {
     font-family: 'Paytone One', sans-serif;
 }
 img:hover {
-    background: white;
-    opacity: 0px;
+    -webkit-filter: drop-shadow(0px -12px 7px rgba(246, 246, 85, 0.3)); filter: drop-shadow(0px -12px 7px  rgba(246, 246, 85, 0.3));
+    cursor: pointer;
+    animation: pulse 2s infinite;
 }
 contaniner {
     width: 100%;
@@ -26,8 +27,8 @@ contaniner {
 #crystalone {
     width: 150px;
     position: absolute;
-    left: 340px;
-    bottom: 60px;
+    left: 345px;
+    bottom: 67px;
 }
 #crystaltwo {
     width: 150px;
@@ -39,16 +40,41 @@ contaniner {
     width: 150px;
     position: absolute;
     left: 215px;
-    top: 115px;
+    top: 110px;
 }
 #crystalfour {
     width: 150px;
     position: absolute;
     left: 820px;
-    top: 120px;
+    top: 110px;
 }
 #score {
     position: relative;
     bottom: 0px;
     
 }
+/*@-webkit-keyframes img {
+    0% {
+      -webkit-filter: drop-shadow(0px 0px 0px 0px rgba(246, 246, 85, 0.3));
+    }
+    70% {
+        -webkit-filter: drop-shadow(0px -12px 7px 20px rgba(246, 246, 85, 0.3));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px -20px 7px 0 rgba(246, 246, 85, 0.3));
+    }
+  }*/
+  /*@keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(246, 246, 85, 0.3);
+      box-shadow: 0 0 0 0 rgba(246, 246, 85, 0.3);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(246, 246, 85, 0.3);
+        box-shadow: 0 0 0 10px rgba(246, 246, 85, 0.3);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(246, 246, 85, 0.3);
+        box-shadow: 0 0 0 0 rgba(246, 246, 85, 0.3);
+    }
+}*/

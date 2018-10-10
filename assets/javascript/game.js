@@ -11,6 +11,20 @@ $(document).ready(function () {
     let lossesCounter = 0;
     let playerScore = 0;
 
+    //Sounds trigger on mouse over. Seems to take a long time to load. Also not consistent, probably due to file lengths. 
+    $('#crystalone').mouseenter(function() {
+        $('audio').get(0).play();
+    });
+    $('#crystaltwo').mouseenter(function() {
+        $('audio').get(1).play();
+    });
+    $('#crystalthree').mouseenter(function() {
+        $('audio').get(2).play();
+    });
+    $('#crystalfour').mouseenter(function() {
+        $('audio').get(3).play();
+    });
+
     function reset() { //RESET
 
         //generates random numbers from the designated ranges for the target and crystals
@@ -54,6 +68,7 @@ $(document).ready(function () {
         $('#score').html('Your score: ' + playerScore);
         $('#wins').html(winsCounter);
         $('#losses').html(lossesCounter);
+    
     }
     //Win/Lose conditions.
     function winLose() {
