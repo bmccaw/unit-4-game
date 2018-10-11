@@ -55,12 +55,22 @@ $(document).ready(function () {
         $('#wins').html(winsCounter);
         $('#losses').html(lossesCounter);
     
+        //Should open modal --- work on fixing
+        $(window).load(function(){        
+            $('#myModal').modal('show');
+             }); 
+    
+
     //plays music when user clicks anywhere in the <body>
     $('body').click(function() {
         $('audio').get(4).play();
         $('#music').prop('volume', 0.5);
     });
-
+    //plays thunderstorm sound file on click in the <body>
+    $('body').click(function() {
+        $('audio').get(5).play();
+        $('#music').prop('volume', 0.5);
+    });
     //Sounds trigger on mouse over. Seems to only work after clicking somewhere on page. Also not consistent, probably due to file lengths. 
     $('#crystalone').mouseenter(function() {
         $('audio').get(0).play();

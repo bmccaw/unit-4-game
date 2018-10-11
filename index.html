@@ -13,12 +13,35 @@
     
 </head>
 <body>
+    <!--Preloaded audio files-->
     <audio id="sound1" src="assets/sounds/bonang_1.wav"></audio>
     <audio id="sound2" src="assets/sounds/bonang_2.wav"></audio>
     <audio id="sound3" src="assets/sounds/bonang_3.wav"></audio>
     <audio id="sound4" src="assets/sounds/bonang_4.wav"></audio>
     <audio id ="music" src="assets/sounds/atmospheric-ambient-jungle-music-heart-of-the-jungle-royalty-and-copyright-free.mp3" autoplay type="audio/mpeg" loop="loop" preload="auto"></audio>
-
+    <audio id ="music" src="assets/sounds/heavy-rain.wav" autoplay type="audio/wav" loop="loop" preload="auto"></audio>
+    <!--Modal on page load-->
+    <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">The Crystal Cave</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Welcome to the Crystal Cave. Press the Start button to begin.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Start</button>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+<!--Rain effects-->
+<div class="rain">
+<!--Content container-->
 <div class="container text-light">
     <div class="row">
         <div class="col-sm-12 text-center text-light p-2">
@@ -65,7 +88,7 @@
         </div>
     </div>
 </div>
-
+</div>
     <script src="Assets/javascript/game.js"></script>
 </body>
 </html>
