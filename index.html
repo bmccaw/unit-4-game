@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Escape from Crystal Cave</title>
+    <title>The Crystal Cave</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,14 +17,16 @@
     <audio id="sound2" src="assets/sounds/bonang_2.wav"></audio>
     <audio id="sound3" src="assets/sounds/bonang_3.wav"></audio>
     <audio id="sound4" src="assets/sounds/bonang_4.wav"></audio>
+    <audio id ="music" src="assets/sounds/atmospheric-ambient-jungle-music-heart-of-the-jungle-royalty-and-copyright-free.mp3" autoplay type="audio/mpeg" loop="loop" preload="auto"></audio>
+
 <div class="container text-light">
     <div class="row">
         <div class="col-sm-12 text-center text-light p-2">
-            <h1>Escape from Crystal Cave</h1>
+            <h1>The Crystal Cave</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4" id="directions">
             <h2>Directions:</h2>
             <br>
             <p>
@@ -37,13 +39,13 @@
                 Each crystal has also been assigned a number that is hidden until you select it. 
             </p>
             <p>
-                You must use the crystals to reach the target number without going over in order to open the door and escape to the next chamber.
+                You must use the crystals to reach the target number without going over in order to open the door and escape the cave.
             </p>
         </div>
         <div class="col-sm-4 text-center">
             <h2>Target Number<br><span id="target"></span></h2>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-4 text-center" id="win-lose">
             <h2>Wins: <span id="wins"></span></h2>
             <br>
             <h2>Losses: <span id="losses"></span></h2>
