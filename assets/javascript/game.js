@@ -1,3 +1,7 @@
+//Modal opens on page load. User needs to click to continue, which enables playing of sound files.
+$(window).ready (function () {
+        $('#myModal').modal ('show')
+});
 $(document).ready(function () {
 
     let targetNum = '';
@@ -54,12 +58,6 @@ $(document).ready(function () {
         $('#score').html('Your score: ' + playerScore);
         $('#wins').html(winsCounter);
         $('#losses').html(lossesCounter);
-    
-        //Should open modal --- work on fixing
-        $(window).load(function(){        
-            $('#myModal').modal('show');
-             }); 
-    
 
     //plays music when user clicks anywhere in the <body>
     $('body').click(function() {
@@ -69,7 +67,7 @@ $(document).ready(function () {
     //plays thunderstorm sound file on click in the <body>
     $('body').click(function() {
         $('audio').get(5).play();
-        $('#music').prop('volume', 0.5);
+        $('#thunder').prop('volume', 0.25);
     });
     //Sounds trigger on mouse over. Seems to only work after clicking somewhere on page. Also not consistent, probably due to file lengths. 
     $('#crystalone').mouseenter(function() {
@@ -89,10 +87,28 @@ $(document).ready(function () {
     function winLose() {
         if (playerScore === targetNum) {
             winsCounter++;
+            $(window).ready (function () {
+                $('#winModal').modal ('show')
+                $('audio').get(6).play();
+                $('.shake').effect('shake', {times: 3}, 2000);
+                setTimeout(function () {
+                $('.content').fadeOut();
+                $('#winModal').appendTo('body');},2000);
+                $('#grove').click(function() { 
+                    $('.content').switchClass('content', 'grove');
+                    $('img, .container, #bird1, #bird2').hide();
+                    $('div').removeClass('rain');
+                    $('div').removeClass('shake');
+                    $('.grove').fadeIn();
+                });
+        });            
             reset();
         }
         else if (playerScore > targetNum) {
             lossesCounter++;
+            $(window).ready (function () {
+                $('#lossModal').modal ('show')
+        });
             reset();
         }
     }

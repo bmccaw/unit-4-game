@@ -15,3 +15,9 @@ Currently Working
 Current Bugs
 =============================
 - no current bugs reported
+
+Added features
+=============================
+- modal on page load. user must click to close it and thus enable autoplay of sounds
+- modal on win/loss scenarios. win modal includes sound and shake effect
+- on win, screen transitions to new background image

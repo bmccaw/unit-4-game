@@ -3,67 +3,122 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>The Crystal Cave</title>
+    <title>The Sacred Grove</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     
 </head>
 <body>
+    <div class="content">
     <!--Preloaded audio files-->
     <audio id="sound1" src="assets/sounds/bonang_1.wav"></audio>
     <audio id="sound2" src="assets/sounds/bonang_2.wav"></audio>
     <audio id="sound3" src="assets/sounds/bonang_3.wav"></audio>
     <audio id="sound4" src="assets/sounds/bonang_4.wav"></audio>
     <audio id ="music" src="assets/sounds/atmospheric-ambient-jungle-music-heart-of-the-jungle-royalty-and-copyright-free.mp3" autoplay type="audio/mpeg" loop="loop" preload="auto"></audio>
-    <audio id ="music" src="assets/sounds/heavy-rain.wav" autoplay type="audio/wav" loop="loop" preload="auto"></audio>
-    <!--Modal on page load-->
-    <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
+    <audio id ="thunder" src="assets/sounds/heavy-rain.wav" autoplay type="audio/wav" loop="loop" preload="auto"></audio>
+    <audio id="door" src="assets/sounds/door-opens.wav"></audio>
+    <div class="shake">
+    <!--Bootstrap Modal on page load-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content text-light">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">The Crystal Cave</h4>
+                  <h2 class="modal-title text-center" id="exampleModalLabel">The Sacred Grove</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
                 <div class="modal-body">
-                  <p>Welcome to the Crystal Cave. Press the Start button to begin.</p>
+                  <p>
+                      Can you gain entrance to the Sacred Grove?
+                  </p>
+                  <p>
+                      You will be presented with a number.
+                  </p>
+                  <p>
+                      Each sacred stone has also been assigned a number that is hidden until you select it. 
+                  </p>
+                  <p>
+                      You must use the stones to reach the target number without going over in order to open the door and enter the grove.
+                  </p>
+                  <p>
+                      Click 'Start' to continue.
+                 </p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Start</button>
+                  <button type="button" class="btn btn-dark mr-auto ml-auto" data-dismiss="modal">Start</button>
                 </div>
               </div>
-          
             </div>
           </div>
+          <!--Bootstrap Modal on Loss.-->
+          <div class="modal fade" id="lossModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content text-light">
+                    <div class="modal-header">
+                      <h2 class="modal-title text-center" id="exampleModalLabel">Nothing Happens...</h2>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark mr-auto ml-auto" data-dismiss="modal">Try Again</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Bootstrap Modal on Win-->
+              <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content text-light">
+                        <div class="modal-header">
+                          <h2 class="modal-title text-center" id="exampleModalLabel">Success!</h2>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <p>
+                                    The door opens! You may now proceed to the Sacred Grove.
+                                </p>
+                              </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-dark mr-auto ml-auto" data-dismiss="modal" id="grove">Huzzah!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 <!--Rain effects-->
 <div class="rain">
+    <div id="bird1"></div>
+    <div id="bird2"></div>
 <!--Content container-->
 <div class="container text-light">
     <div class="row">
         <div class="col-sm-12 text-center text-light p-2">
-            <h1>The Crystal Cave</h1>
+            <h1>The Sacred Grove</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4" id="directions">
-            <h2>Directions:</h2>
-            <br>
-            <p>
-                Can you escape the Crystal Cave?
-            </p>
-            <p>
-                You will see now that you have been presented with a number.
-            </p>
-            <p>
-                Each crystal has also been assigned a number that is hidden until you select it. 
-            </p>
-            <p>
-                You must use the crystals to reach the target number without going over in order to open the door and escape the cave.
-            </p>
+                <h2>Remember:</h2>
+                <br>
+                <p>
+                    Your target number is at the top of the screen.
+                </p>
+                <p>
+                    Each sacred stone has also been assigned a random number that is hidden from you. 
+                </p>
+                <p>
+                    You must use the stones to reach the target number without going over in order to open the door and enter the grove.
+                </p>
         </div>
         <div class="col-sm-4 text-center">
             <h2>Target Number<br><span id="target"></span></h2>
@@ -87,6 +142,8 @@
             <h3><span id="score"></span></h3>
         </div>
     </div>
+</div>
+</div>
 </div>
 </div>
     <script src="Assets/javascript/game.js"></script>
