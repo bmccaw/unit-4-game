@@ -1,5 +1,5 @@
 # unit-4-game
-Escape from Crystal Cave
+The Sacred Grove (my take on a Crystal Collector game)
 
 Click on the crystals in order to reach the target number. If you reach the number without going over, you win. Otherwise, you lose.
 

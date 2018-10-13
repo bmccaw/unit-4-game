@@ -121,9 +121,10 @@ $(document).ready(function () {
         $('img, .container').show();
         $('#rain').addClass('rain');
         $('#shake').addClass('shake');
+        $('.grove').fadeIn();
         $('.content').fadeIn();
-        $('.content').show();
     });
+
     //Assign buttons their crystal value and have it display as the player score on click. Additive with each button click.
 
     $('#crystalone').click(function () {
