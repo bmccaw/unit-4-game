@@ -14,7 +14,8 @@ Currently Working
 
 Current Bugs
 =============================
-- screen goes to black when after pressing 'Yes' in Play Again modall. seems to be an issue with a div being assigned display none. not sure how that is happening.
+- ~~screen goes to black when after pressing 'Yes' in Play Again modall. seems to be an issue with a div being assigned display none. not sure how that is happening.~~ Fixed.
+- ~~cannot get audio to stop upon transition~~ Fixed. Sort of. Muting sound instead of pausing it.
 
 Added features
 =============================
