@@ -90,16 +90,19 @@ $(document).ready(function () {
             $(window).ready (function () {
                 $('#winModal').modal ('show')
                 $('audio').get(6).play();
-                $('.shake').effect('shake', {times: 3}, 2000);
+                $('.shake').effect('shake', {times: 5}, 2000);
+                //Fade out all elements and then fade into new background image on click.
                 setTimeout(function () {
                 $('.content').fadeOut();
-                $('#winModal').appendTo('body');},2000);
-                $('#grove').click(function() { 
+                $('#winModal').appendTo('body');},3000);
+                $('#grove').click(function() {
                     $('.content').switchClass('content', 'grove');
-                    $('img, .container, #bird1, #bird2').hide();
+                    $('img, .container').hide();
                     $('div').removeClass('rain');
                     $('div').removeClass('shake');
                     $('.grove').fadeIn();
+                    setTimeout(function () {
+                        $('#playAgainModal').modal('show');},10000);
                 });
         });            
             reset();
@@ -112,6 +115,15 @@ $(document).ready(function () {
             reset();
         }
     }
+    $('#playAgain').click(function() {
+        $('.grove').fadeOut();
+        $('.grove').switchClass('grove', 'content');
+        $('img, .container').show();
+        $('#rain').addClass('rain');
+        $('#shake').addClass('shake');
+        $('.content').fadeIn();
+        $('.content').show();
+    });
     //Assign buttons their crystal value and have it display as the player score on click. Additive with each button click.
 
     $('#crystalone').click(function () {

@@ -6,6 +6,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height:100vh;
+    display: block;
 }
 .grove {
     background-image: url(../images/sacredgrove.jpg);
@@ -115,40 +116,6 @@ body {
         opacity: 0%;
     }
 }
-#bird1 {
-    background-image: url(../images/Silhouette_bird_flight.gif);
-    height: 220px;
-    width:230px;
-    margin: 0px;
-    padding: 0px;
-    top: 200px;
-    background-repeat: no-repeat;
-    position: absolute;
-    overflow: hidden;
-    -webkit-animation: fly 6s linear infinite;
-    animation: fly 6s linear infinite;
-}
-#bird2 {
-    background-image: url(../images/Silhouette_bird_flight.gif);
-    height: 220px;
-    width:230px;
-    margin: 0px;
-    padding: 0px;
-    top: 100px;
-    background-repeat: no-repeat;
-    position: absolute;
-    overflow: hidden;
-    -webkit-animation: fly 5s linear infinite;
-    animation: fly 5s linear infinite;
-}
-@keyframes fly {
-    from {left:-200px}
-    to {left :1250px};
-}
-@-webkit-keyframes fly {
-    from {left:-200px}
-    to {left :1250px};
-}
 #myModal {
     position: absolute;
     top: 150px;
@@ -244,3 +211,4 @@ contaniner {
     top: 70px;
     
 }
+

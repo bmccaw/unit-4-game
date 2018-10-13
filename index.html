@@ -24,7 +24,8 @@
     <audio id ="music" src="assets/sounds/atmospheric-ambient-jungle-music-heart-of-the-jungle-royalty-and-copyright-free.mp3" autoplay type="audio/mpeg" loop="loop" preload="auto"></audio>
     <audio id ="thunder" src="assets/sounds/heavy-rain.wav" autoplay type="audio/wav" loop="loop" preload="auto"></audio>
     <audio id="door" src="assets/sounds/door-opens.wav"></audio>
-    <div class="shake">
+
+    <div class="shake" id="shake">
     <!--Bootstrap Modal on page load-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -86,7 +87,13 @@
                         </div>
                         <div class="modal-body">
                                 <p>
-                                    The door opens! You may now proceed to the Sacred Grove.
+                                    The door opens!
+                                </p>
+                                <p>
+                                    You step up to the massive tree and peer inside. At the end of a dark corridor, you see a faint light.
+                                </p>
+                                <p>
+                                    The Sacred Grove awaits!
                                 </p>
                               </div>
                         <div class="modal-footer">
@@ -95,10 +102,24 @@
                       </div>
                     </div>
                   </div>
+                  <!--Play Again modal-->
+                  <div class="modal fade" id="playAgainModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content text-light">
+                            <div class="modal-header">
+                              <h2 class="modal-title text-center" id="exampleModalLabel">Play Again?</h2>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-dark mr-auto ml-auto" data-dismiss="modal" id="playAgain">Yes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 <!--Rain effects-->
-<div class="rain">
-    <div id="bird1"></div>
-    <div id="bird2"></div>
+<div class="rain" id="rain">
 <!--Content container-->
 <div class="container text-light">
     <div class="row">
@@ -146,6 +167,9 @@
 </div>
 </div>
 </div>
+<audio id ="grovemusic" src="assets/sounds/enchanted-forest.mp3" type="audio/mpeg" loop="loop" preload="auto"></audio>
+<audio id ="grovesound" src="assets/sounds/forest-grove.wav" type="audio/wav" loop="loop" preload="auto"></audio>
+
     <script src="Assets/javascript/game.js"></script>
 </body>
 </html>
