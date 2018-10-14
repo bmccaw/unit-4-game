@@ -211,4 +211,92 @@ contaniner {
     top: 70px;
     
 }
+/*TEST*/
+/* #lights{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+.lightWrapper, .light{
+  position: absolute;
+}
 
+.light{
+  -webkit-animation-name: float;
+  -webkit-animation-duration: 80s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.light{
+    animation-name: float;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+@keyframes float{
+    15% {
+      margin-left: 50%;
+      margin-top: 50%;
+    }
+  
+    30% {
+      margin-left: 100%;
+      margin-top: 100%;
+    }
+  
+    45% {
+      margin-left: 150%;
+      margin-top: 50%;
+    }
+  
+    60% {
+      margin-left: 100%;
+      margin-top: 0%;
+    }
+  
+    75% {
+      margin-left: 0%;
+      margin-top: 100%;
+    }
+  
+    90% {
+      margin-left: -50%;
+      margin-top: 50%;
+    }
+  
+  }
+@-webkit-keyframes float{
+  15% {
+    margin-left: 50%;
+    margin-top: 50%;
+  }
+
+  30% {
+    margin-left: 100%;
+    margin-top: 100%;
+  }
+
+  45% {
+    margin-left: 150%;
+    margin-top: 50%;
+  }
+
+  60% {
+    margin-left: 100%;
+    margin-top: 0%;
+  }
+
+  75% {
+    margin-left: 0%;
+    margin-top: 100%;
+  }
+
+  90% {
+    margin-left: -50%;
+    margin-top: 50%;
+  }
+
+} */
